@@ -1,0 +1,150 @@
+:root {
+	/*Variables para header tag*/
+	--nav-text-color: darkblue;
+	--nav-bg-hover: darkblue;
+	--nav-color-hover: whitesmoke;
+	/*Variables para main tag*/
+	--card-border: #F5FFFA;
+	--card-old-price: #C0C0C0;
+	--card-service-layout: #800000;
+	--card-service-text: #eee8aa;
+	--card-description-text: #808080;
+	--card-button: #467fd0;
+	--card-button-text: #f8f8ff;
+}
+
+h1, h2, h3, h4, h5, h6,p {
+	margin: 0px;
+	font-family: Tahoma;
+}
+
+p {
+	font-family: Tahoma;
+}
+/*Inicio header tag*/
+#navegacion {
+	/*Centrar la barra de navegación con estos márgenes*/
+	margin: auto;
+	/*Tamaño calculado para que todos los botones de la barra se ajusten*/
+	width: 720px;
+}
+
+.wrapper-nav {
+	/*Dimensiones del contenedor con borde y objetos desplegados en una sola línea*/
+	width: 150px;
+	height: 30px;
+	display: inline-block;
+	/*padding top y text align center para centrar el texto en el medio del contenedor*/
+	padding-top: 14px;
+	text-align: center;
+	/*Tipo de fuente y color*/
+	font-family: Arial;
+	font-size: 18px;
+	color: var(--nav-text-color);
+	overflow: auto;
+}
+/*Que las imagenes se despleguen en forma lineal, es decir, una al lado de la otra y no una debajo de otra*/
+.img-nav {
+	display: inline-block;
+}
+/*Para dar contraste al posicionar el ratón (Se puede mejorar el efecto)*/
+.wrapper-nav:hover {
+	background-color: var(--nav-bg-hover);
+	color: var(--nav-color-hover);
+}
+/*Responsive Design Para tres tipos de dispositivos*/
+@media only screen and (max-width: 250px){
+	#navegacion {
+		width: 245px;
+	}
+
+	.wrapper-nav,.img-nav {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 250px){
+	#navegacion {
+		width: 100%;
+	}
+	.wrapper-nav, .img-nav {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width:730px){
+	#navegacion {
+		width: 725px;
+	}
+	.wrapper-nav, .img-nav {
+		width: 19%;
+		display: inline-block;
+	}
+}
+/*Fin header tag*/
+/*Inicio del Main tag*/
+.main-container {
+	width: 1110px;
+	height: 1200px;
+	margin: 10px auto auto auto;
+}
+
+.card-container {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5px;
+}
+
+.card-product {
+	border: 2px solid var(--card-border);
+	border-radius: 10px;
+	
+}
+
+.card-specification {
+	display: flex;
+	gap: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.card-specification > h2 {
+
+	padding-top: 20px;
+}
+
+.old-price {
+	color: var(--card-old-price);
+}
+
+.card-service {
+	margin: 1% auto 1% 5%;
+	border: 3px var(--card-border);
+	background-color: var(--card-service-layout);
+	box-shadow: 0px 0px 10px;
+	border-radius: 10px;
+	color: var(--card-service-text);
+}
+
+.card-description {
+	color:  var(--card-description-text);
+	margin: 10px 10px 10px 10px;
+}
+
+.card-button {
+	padding: 10px;
+	margin: 10px auto 10px 10px;
+	color: var(--card-button-text);
+	background-color: var(--card-button);
+	border-radius: 10px;
+	font-size: 16px;
+	border-color: var(--card-button);
+}
+
+.responsive-img {
+	width: 100%;
+	max-width: 70%;
+	height: auto;
+}
